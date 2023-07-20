@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Results</title>
+</head>
+
+<body>
+  <h1>Search Results</h1>
+  <form id="search-form">
+    <input type="text" id="search-query" placeholder="Enter search query" required>
+    <select id="search-format">
+      <option value="">All Formats</option>
+      <option value="books">Books</option>
+      <option value="photos">Photos</option>
+      <option value="maps">Maps</option>
+      <!-- Add more options for other formats if desired -->
+    </select>
+    <button type="submit">Search</button>
+  </form>
+  
+  <div id="results-container"></div>
+
+  <script src="js/search-results.js"></script>
+</body>
+
+</html>
