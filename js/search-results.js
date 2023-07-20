@@ -95,24 +95,4 @@ var getSearchResults = function (query, format) {
     });
 };
 
-var displayResults = function (data) {
-  // Clear the results container
-  resultsContainerEl.innerHTML = '';
-
-  // Check if there are any search results
-  if (data.results.length === 0) {
-    resultsContainerEl.innerHTML = '<p>No results found.</p>';
-    return;
-  }
-
-  // Loop through the search results and display them
-  for (var i = 0; i < data.results.length; i++) {
-    var resultEl = document.createElement('div');
-    resultEl.classList = 'result';
-    resultEl.innerHTML = '<h3>' + data.results[i].title + '</h3><p>' + data.results[i].description + '</p>';
-
-    resultsContainerEl.appendChild(resultEl);
-  }
-};
-
 searchFormEl.addEventListener('submit', formSubmitHandler);
